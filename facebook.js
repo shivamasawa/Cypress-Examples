@@ -1,0 +1,15 @@
+describe('Facebook Testing', function(){
+	it('Visits Facebook', function(){
+		cy.visit('https://www.facebook.com')
+		cy.get('[name = "firstname"]').type("Test")
+		cy.get('[name = "lastname"]').type("User")
+		cy.get('[name = "reg_email__"]').type("testuser@gmail.com")
+		cy.get('[name = "reg_email_confirmation__"]').type("testuser@gmail.com")
+		cy.get('[name = "reg_passwd__"]').type("12345")
+		cy.get('[name = "birthday_day"]').select("6")
+		cy.get('[name = "birthday_month"]').select("10")
+		cy.get('[name = "birthday_year"]').select("1996")
+		cy.get('[type = "radio"]').check('2')
+		cy.get('[name = "websubmit"]').click()
+	})
+})
